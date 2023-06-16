@@ -65,7 +65,3 @@ async def suggestions(request: Request):
         'items': items
     }
 
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run('app:app', reload=True, port=5000)
