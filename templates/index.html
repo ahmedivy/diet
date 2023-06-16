@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diet Plan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-sm p-3">
+      <div class="row">
+        <h1 class="text-center">Diet Plan</h1>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="gender"
+            >
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="weight" class="form-label">Weight (kg)</label>
+            <input type="number" class="form-control" id="weight" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="height" class="form-label">Height (cm)</label>
+            <input type="number" class="form-control" id="height" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="days" class="form-label">Number of days</label>
+          <input
+            type="number"
+            class="form-control"
+            id="days"
+            aria-describedby="daysHelp"
+          />
+          <div id="daysHelp" class="form-text">
+            For how many days you want to shop?
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Dietary Preference</label>
+          <div class="form-check form-check-inline">
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="vegetarian"
+                name="diet"
+                value="vegetarian"
+              />
+              <label class="form-check-label" for="vegetarian"
+                >I am a vegetarian</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="non-vegetarian"
+                name="diet"
+                value="non-vegetarian"
+              />
+              <label class="form-check-label" for="non-vegetarian"
+                >I am a Non-Vegetarian</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="neither"
+                name="diet"
+                value="neither"
+              />
+              <label class="form-check-label" for="neither">I don't care</label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="allergies-checkbox"
+            />
+            <label class="form-check-label" for="allergies-checkbox">
+              I have allergies
+            </label>
+          </div>
+        </div>
+        <div class="mb-3" id="allergies-input">
+          <label for="allergies" class="form-label">Allergies</label>
+          <input
+            type="text"
+            class="form-control"
+            id="allergies"
+            aria-describedby="allergiesHelp"
+          />
+          <div id="allergiesHelp" class="form-text">
+            Please enter your allergies separated by comma
+          </div>
+        </div>
+        <button class="btn btn-primary" id="submit-button">
+          Go to shopping
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="{{ url_for('static', path='index.js') }}"></script>
+  </body>
+</html>
