@@ -60,7 +60,6 @@ def get_all_products(preference: str, allergies: list) -> List[dict]:
     elif preference == 'non-vegetarian':
         products = products[products['Category'] != 'Veggie']
 
-    print(allergies)
 
     # Filter the products by allergies
     for allergy in allergies:
